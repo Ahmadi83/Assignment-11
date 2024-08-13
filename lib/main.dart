@@ -25,52 +25,62 @@ class _MyAppState extends State<MyApp> {
     {
     'name': 'Shaikh Abdul Basit-Abdul Samad',
       'picture': 'images/basit.jpg',
-      'description': "Abdul rahman his last name is al Sodais"
+      'description': "Abdul rahman his last name is al Sodais",
+      'country': 'Egypt'
   },
     {
       'name': 'Shaikh Mahmood Al Khalil Al-Hussary',
       'picture': 'images/mah.jpg',
-      'description': "Abdul rahman his last name is al Sodais"
+      'description': "Abdul rahman his last name is al Sodais",
+      'country': 'Egypt'
     },
     {
       'name': 'Shaikh Mohammad Sidiq -Minshawi',
       'picture': 'images/basit.jpg',
-      'description': "Abdul rahman his last name is al Sodais"
+      'description': "Abdul rahman his last name is al Sodais",
+      'country': 'Egypt'
     },
     {
       'name': 'Shaikh Maher Al-Muiaiqly',
       'picture': 'images/basit.jpg',
-      'description': "Abdul rahman his last name is al Sodais"
+      'description': "Abdul rahman his last name is al Sodais",
+      'country': 'Egypt'
     },
     {
       'name': 'Shaikh Abdul Rahman Al-Sudais',
-      'picture': 'images/basit.jpg',
-      'description': "Abdul rahman his last name is al Sodais"
+      'picture': 'images/Asodais.jpg',
+      'description': "Abdul rahman his last name is al Sodais",
+      'country': 'Saudi Arabia'
     },
     {
       'name': 'Shaikh Mishary Rashid Al-Aafasy',
       'picture': 'images/basit.jpg',
-      'description': "Abdul rahman his last name is al Sodais"
+      'description': "Abdul rahman his last name is al Sodais",
+      'country': 'Egypt'
     },
     {
       'name': 'Shaikh Ahmad Al-Ajmi',
       'picture': 'images/basit.jpg',
-      'description': "Abdul rahman his last name is al Sodais"
+      'description': "Abdul rahman his last name is al Sodais",
+      'country': 'Egypt'
     },
     {
       'name': 'Shaikh Mohammad Siddiq',
       'picture': 'images/basit.jpg',
-      'description': "Abdul rahman his last name is al Sodais"
+      'description': "Abdul rahman his last name is al Sodais",
+      'country': 'Egypt'
     },
     {
       'name': 'Shaikh Abdul Samad ',
       'picture': 'images/basit.jpg',
-      'description': "Abdul rahman his last name is al Sodais"
+      'description': "Abdul rahman his last name is al Sodais",
+      'country': 'Egypt'
     },
     {
       'name': 'Shaikh Salim Al-Hilali',
       'picture': 'images/basit.jpg',
-      'description': "Abdul rahman his last name is al Sodais"
+      'description': "Abdul rahman his last name is al Sodais",
+      'country': 'Egypt'
     },
   ];
 
@@ -103,14 +113,14 @@ class _MyAppState extends State<MyApp> {
             child: ListTile(
               shape: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
               splashColor: Colors.blueGrey,
-              title: Text(list[index]['name']),
-              subtitle: Text('Sodais'),
+              title: Text(list[index]['name'],style: TextStyle(color: Colors.purple,fontSize: 18),),
+              subtitle: Text(list[index]['country'],style: TextStyle(color: Colors.red,fontSize: 17),),
               leading: CircleAvatar(
                 radius: 30,
                   backgroundImage: AssetImage(
                (list[index]['picture']),)),
               trailing: IconButton(onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {return Details(name: list[index]['name'],picture: list[index]['picture'],description: list[index]['description'],);},));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {return Details(name: list[index]['name'],picture: list[index]['picture'],description: list[index]['description'], country: list[index]['country'],);},));
               },
                   icon:Icon(Icons.arrow_forward,)),
                 onTap: (){},
