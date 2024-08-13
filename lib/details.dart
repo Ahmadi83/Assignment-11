@@ -6,8 +6,9 @@ class Details extends StatelessWidget {
   final String name;
   final String picture;
   final String description;
+  final String country;
 
-  const  Details({super.key, required this.name, required this.picture, required this.description});
+  const  Details({super.key, required this.name, required this.picture, required this.description, required this.country});
 
   @override
   Widget build(BuildContext context) {
