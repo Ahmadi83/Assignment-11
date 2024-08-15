@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 void main(){
 
- runApp(MaterialApp(debugShowCheckedModeBanner: true,
+ runApp(MaterialApp(debugShowCheckedModeBanner: false,
    home: MyApp(),
  )) ;
 }
@@ -23,64 +23,64 @@ class _MyAppState extends State<MyApp> {
 
   List<Map<String,dynamic>> list =[
     {
-    'name': 'Shaikh Abdul Basit-Abdul Samad',
+    'name': 'شیخ عبدالباسط',
       'picture': 'images/basit.jpg',
       'description': "Abdul rahman his last name is al Sodais",
-      'country': 'Egypt'
+      'country': 'مصر'
   },
     {
-      'name': 'Shaikh Mahmood Al Khalil Al-Hussary',
+      'name': 'شیخ محمود الخلیل ',
       'picture': 'images/mah.jpg',
       'description': "Abdul rahman his last name is al Sodais",
-      'country': 'Egypt'
+      'country': 'مصر'
     },
     {
-      'name': 'Shaikh Mohammad Sidiq -Minshawi',
-      'picture': 'images/basit.jpg',
+      'name': ' شیخ سعد الغامدی ',
+      'picture': 'images/ghamedi.jpg',
       'description': "Abdul rahman his last name is al Sodais",
-      'country': 'Egypt'
+      'country': 'عربستان سعودی'
     },
     {
-      'name': 'Shaikh Maher Al-Muiaiqly',
-      'picture': 'images/basit.jpg',
+      'name': 'شیخ ماهر المعیقلی',
+      'picture': 'images/maher1.jpg',
       'description': "Abdul rahman his last name is al Sodais",
-      'country': 'Egypt'
+      'country': 'عربستان سعودی'
     },
     {
-      'name': 'Shaikh Abdul Rahman Al-Sudais',
+      'name': 'شیخ عبدالرحمن السدیس',
       'picture': 'images/Asodais.jpg',
       'description': "Abdul rahman his last name is al Sodais",
-      'country': 'Saudi Arabia'
+      'country': 'عربستان سعودی'
     },
     {
-      'name': 'Shaikh Mishary Rashid Al-Aafasy',
-      'picture': 'images/basit.jpg',
+      'name': 'شیخ راشد العفاسی',
+      'picture': 'images/Afasi.jpg',
       'description': "Abdul rahman his last name is al Sodais",
-      'country': 'Egypt'
+      'country': 'کویت'
     },
     {
-      'name': 'Shaikh Ahmad Al-Ajmi',
-      'picture': 'images/basit.jpg',
+      'name': 'شیخ احمد العجمی',
+      'picture': 'images/ajami.jpg',
       'description': "Abdul rahman his last name is al Sodais",
-      'country': 'Egypt'
+      'country': 'عربستان سعودی'
     },
     {
-      'name': 'Shaikh Mohammad Siddiq',
-      'picture': 'images/basit.jpg',
+      'name': 'شیخ مصطفی اسماعیل',
+      'picture': 'images/esmaeil.jpg',
       'description': "Abdul rahman his last name is al Sodais",
-      'country': 'Egypt'
+      'country': 'مصر'
     },
     {
-      'name': 'Shaikh Abdul Samad ',
-      'picture': 'images/basit.jpg',
+      'name': 'شیخ طارق جمیل ',
+      'picture': 'images/tareq.jpg',
       'description': "Abdul rahman his last name is al Sodais",
-      'country': 'Egypt'
+      'country': 'پاکستان'
     },
     {
-      'name': 'Shaikh Salim Al-Hilali',
-      'picture': 'images/basit.jpg',
+      'name': 'شیخ سلیم الهلالی',
+      'picture': 'images/salim.jpg',
       'description': "Abdul rahman his last name is al Sodais",
-      'country': 'Egypt'
+      'country': 'یمن'
     },
   ];
 
@@ -91,8 +91,10 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey
+      ,
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.green,
         title: Text("Top 10 Quran's Readers ",
         style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
         actions:[PopupMenuButton(onSelected: (values){
@@ -111,10 +113,10 @@ class _MyAppState extends State<MyApp> {
           itemBuilder: (context, index) {
           return Card(
             child: ListTile(
-              shape: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
+              shape: OutlineInputBorder(borderRadius: BorderRadius.circular(14)),
               splashColor: Colors.blueGrey,
-              title: Text(list[index]['name'],style: TextStyle(color: Colors.purple,fontSize: 18),),
-              subtitle: Text(list[index]['country'],style: TextStyle(color: Colors.red,fontSize: 17),),
+              title: Text(list[index]['name'],style: TextStyle(color: Colors.purple,fontSize: 20,fontWeight: FontWeight.w600),),
+              subtitle: Text(list[index]['country'],style: TextStyle(color: Colors.red,fontSize: 17,fontWeight: FontWeight.bold),),
               leading: CircleAvatar(
                 radius: 30,
                   backgroundImage: AssetImage(

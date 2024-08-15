@@ -9,7 +9,7 @@ class Details extends StatelessWidget {
   final String country;
 
   const  Details({super.key, required this.name, required this.picture, required this.description, required this.country});
-
+ final url='google.com';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,7 +17,7 @@ class Details extends StatelessWidget {
       body: Column(children:[
         Padding(
           padding: const EdgeInsets.only(bottom: 20),
-          child: Center(child: Text(name,style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),)),
+          child: Center(child: Text(name,style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),)),
         ),
         Center(child:CircleAvatar(
               backgroundImage: AssetImage(picture),
@@ -26,7 +26,11 @@ class Details extends StatelessWidget {
             SizedBox(height: 10,),
 
         Container(width: 480,height: 1,color: Colors.black54,),
-        Center(child: Text(description))
+        Center(child: Text(description)),
+        ElevatedButton(onPressed: () async{
+          final linkToOpen =Uri.parse(url);
+          await launchUrl(linkToOpen);
+          }, child: Text("More"))
       ],)
     );
   }
