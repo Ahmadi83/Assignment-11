@@ -2,9 +2,10 @@ import 'package:assignment_11/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+
 void main(){
 
- runApp(MaterialApp(
+ runApp(MaterialApp(debugShowCheckedModeBanner: false,
    home: MyApp1(),
  )) ;
 }
