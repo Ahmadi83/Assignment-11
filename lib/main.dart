@@ -4,12 +4,6 @@ import 'package:assignment_11/splash_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main(){
-
- runApp(MaterialApp(debugShowCheckedModeBanner: false,
-   home: MyApp(),
- )) ;
-}
 
 class MyApp extends StatefulWidget {
 
@@ -84,6 +78,8 @@ class _MyAppState extends State<MyApp> {
     },
     {
       'name': 'شیخ مصطفی اسماعیل',
+
+
       'picture': 'images/esmaeil.jpg',
       'description': "Abdul rahman his last name is al Sodais",
       'country': 'مصر'
