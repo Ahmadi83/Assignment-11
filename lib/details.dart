@@ -22,7 +22,7 @@ class Details extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.white,
-      appBar: AppBar(),
+      appBar: AppBar(backgroundColor: Colors.green,),
       body: ListView(
         children: [Column(children:[
           Padding(
@@ -57,13 +57,10 @@ class Details extends StatelessWidget {
           ElevatedButton(onPressed: () async{
             final linkToOpen =Uri.parse(link);
             await launchUrl(linkToOpen, );
-            }, child: Text("More",)),
+            }, child: Text("More details....",)),
 
 
 
-          ElevatedButton(onPressed: (){
-           Playsound();
-            }, child: Text("Play")),
         ],),
       ])
     );

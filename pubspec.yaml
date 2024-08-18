@@ -79,6 +79,11 @@ flutter:
     - images/ghamedi.jpg
     - images/shateri.jpg
     - images/parhezgar.jpg
+    - images/me.jpg
+    - images/telegram.jpg
+    - images/google.jpg
+    - images/linkdin.jpg
+    - images/gitgub.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

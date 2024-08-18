@@ -89,13 +89,15 @@ class _MyAppState extends State<MyApp> {
       'link': "https://www.charkhoneh.com/content/930524107",
     },
     {
-      'name': 'استاد پرهیزپگار',
-      'picture': 'images/salim.jpg',
+      'name': 'استاد پرهیزگار',
+      'picture': 'images/parhezgar.jpg',
       'description': "$shahrear",
       'country': 'ایران',
       'link': "https://fa.wikipedia.org/wiki/%D8%B4%D9%87%D8%B1%DB%8C%D8%A7%D8%B1_%D9%BE%D8%B1%D9%87%DB%8C%D8%B2%DA%AF%D8%A7%D8%B1",
     },
   ];
+
+
 
   Aboutme(){
     Navigator.push(context, MaterialPageRoute(builder: (context){return About();}));
@@ -103,11 +105,10 @@ class _MyAppState extends State<MyApp> {
 
 
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey
+      backgroundColor: Colors.white
       ,
       appBar: AppBar(
         backgroundColor: Colors.green,
@@ -135,29 +136,56 @@ class _MyAppState extends State<MyApp> {
        ],),
 
 
-      body: FractionallySizedBox(heightFactor: 1,
-        child: ListView.builder(
-          itemBuilder: (context, index) {
-          return Card(
-            child: ListTile(
-              shape: OutlineInputBorder(borderRadius: BorderRadius.circular(14)),
-              splashColor: Colors.blueGrey,
-              title: Text(list[index]['name'],style: TextStyle(color: Colors.purple,fontSize: 20,fontWeight: FontWeight.w600),),
-              subtitle: Text(list[index]['country'],style: TextStyle(color: Colors.red,fontSize: 17,fontWeight: FontWeight.bold),),
-              leading: CircleAvatar(
-                radius: 30,
-                  backgroundImage: AssetImage(
-               (list[index]['picture']),)),
-              trailing: IconButton(onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {return Details(name: list[index]['name'],picture: list[index]['picture'],
-                      description: list[index]['description'], country: list[index]['country'],link:list[index]['link']);},));
-              },
-                  icon:Icon(Icons.arrow_forward,)),
-                onTap: (){},
-            ),
-          );
+      body: Column(
+        children: [
+          SizedBox(
+            height: 200,
+            child: ListView.builder(itemCount: list.length,
+              scrollDirection: Axis.horizontal,
 
-        },itemCount: list.length,),
+              itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Container( decoration: BoxDecoration(borderRadius: BorderRadius.circular(30),
+                    image:DecorationImage(image: AssetImage(list[index]['picture']),fit: BoxFit.cover ),
+                color: Colors.greenAccent),
+
+                    height: 150,width: 280,
+                 ),
+              );
+            },),
+          ),
+
+
+          
+              
+             Expanded(
+               child: ListView.builder(
+                itemBuilder: (context, index) {Axis.horizontal;
+                return Card(color: Colors.greenAccent,
+                  child: ListTile(
+                    shape: OutlineInputBorder(borderRadius: BorderRadius.circular(14)),
+                    splashColor: Colors.blueGrey,
+               
+                    title: Text(list[index]['name'],style: TextStyle(color: Colors.purple,fontSize: 20,fontWeight: FontWeight.w600),),
+                    subtitle: Text(list[index]['country'],style: TextStyle(color: Colors.red,fontSize: 17,fontWeight: FontWeight.bold),),
+                    leading: CircleAvatar(
+                      radius: 30,
+                        backgroundImage: AssetImage(
+                     (list[index]['picture']),)),
+                    trailing: IconButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) {return Details(name: list[index]['name'],picture: list[index]['picture'],
+                            description: list[index]['description'], country: list[index]['country'],link:list[index]['link']);},));
+                    },
+                        icon:Icon(Icons.arrow_forward,)),
+                      onTap: (){},
+                  ),
+                );
+               
+                           },itemCount: list.length,),
+             ),
+
+        ],
       ),
     );
   }
