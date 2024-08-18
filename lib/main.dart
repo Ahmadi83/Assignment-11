@@ -1,9 +1,11 @@
 
 import 'package:assignment_11/details.dart';
-import 'package:assignment_11/splash_screen.dart';
+import 'package:assignment_11/texts_details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter/services.dart';
+import 'package:share_plus/share_plus.dart';
+import 'About.dart';
 void main(){
 
  runApp(MaterialApp(debugShowCheckedModeBanner: false,
@@ -25,83 +27,79 @@ class _MyAppState extends State<MyApp> {
     {
     'name': 'شیخ عبدالباسط',
       'picture': 'images/basit.jpg',
-      'description': "Abdul rahman his last name is al Sodais",
-      'country': 'مصر'
+      'description': "$abdulbasit",
+      'country': 'مصر',
+      'link': "https://fa.wikipedia.org/wiki/%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%A8%D8%A7%D8%B3%D8%B7_%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B5%D9%85%D8%AF",
   },
     {
       'name': 'شیخ محمود الخلیل ',
       'picture': 'images/mah.jpg',
-      'description': "Abdul rahman his last name is al Sodais",
-      'country': 'مصر'
+      'description': "$mahmood",
+      'country': 'مصر',
+      'link': "https://fa.wikipedia.org/wiki/%D9%85%D8%AD%D9%85%D9%88%D8%AF_%D8%AE%D9%84%DB%8C%D9%84_%D8%A7%D9%84%D8%AD%D8%B5%D8%B1%DB%8C",
+
     },
     {
       'name': ' شیخ سعد الغامدی ',
       'picture': 'images/ghamedi.jpg',
-      'description': "Abdul rahman his last name is al Sodais",
-      'country': 'عربستان سعودی'
+      'description': "$Ghamedi",
+      'country': 'عربستان سعودی',
+      'link': "http://jtjask.blogfa.com/post/4630/%d9%82%d8%a7%d8%b1%db%8c-%d9%85%d8%b4%d9%87%d9%88%d8%b1%d8%9b-%d8%b4%db%8c%d8%ae-%d8%af%da%a9%d8%aa%d8%b1-%d8%b3%d8%b9%d8%af-%d8%a7%d9%84%d8%ba%d8%a7%d9%85%d8%af%db%8c",
     },
     {
       'name': 'شیخ ماهر المعیقلی',
-      'picture': 'images/maher1.jpg',
-      'description': "Abdul rahman his last name is al Sodais",
-      'country': 'عربستان سعودی'
+      'picture': 'images/maher.jpg',
+      'description': "$Maher_moeqly",
+      'country': 'عربستان سعودی',
+      'link': "https://fa.wikipedia.org/wiki/%D9%85%D8%A7%D9%87%D8%B1_%D8%A7%D9%84%D9%85%D8%B9%DB%8C%D9%82%D9%84%DB%8C",
     },
     {
       'name': 'شیخ عبدالرحمن السدیس',
       'picture': 'images/Asodais.jpg',
-      'description': '''
-       عبدالرحمن السدیس، در سال ۱۹۶۰ در ریاض، عربستان سعودی به دنیا آمد و امام جماعت مقدس‌ترین مسجد مسلمانان در مکه، یعنی مسجد الحرام، می‌باشد.
-        او یک قاری قرآن به روش حفظ است. صدای او در میان تلاوت کنندگان قرآن شناخته شده و معروف است. هم‌اکنون رئیس کمیته مدیریت دو مسجد مقدس (مکه و مدینه) است
-      ابوعبدالعزیز عبدالرحمن بن عبدالعزیز بن عبدالله بن محمد بن عبدالعزیز بن محمد بن عبدالله السدیس، نسب وی به قبیله عنزه یکی از قبایل مشهور بکیره از مناطق قصیم می‌باشد. در سال ۱۹۶۰ در شهر ریاض پایتخت کشور عربستان سعودی دیده به جهان گشود. و در سن 12 سالگی با نظارت شیخ عبدالرحمن آل فریان موفق به حفظ کامل قرآن کریم گردید، و آخرین کسی که در نزدشان قرآن را خواندند شیخ محمد علی حسان بودند. وی در دبستان ابن حارث و سپس در مؤسسه علوم ریاض تحصیل کرد، جایی که در سال ۱۹۷۹ با درجه عالی فارغ‌التحصیل شد. بعداً به آکادمی اسلامی ریاض پیوست و در سال ۱۹۸۲ با مدرک شریعت فارغ‌التحصیل شد. سال ۱۹۸۷ کارشناسی ارشد را در رشته شریعت اسلامی در دانشگاه اسلامی امام محمد ابن سعود گذراند و دکتری خود را از دانشگاه ام‌القری در سال ۱۹۹۵ گرفت. در زمان گرفتن دکتری به عنوان استاد در آنجا مشغول تدریس بو
-      فعالیت‌ها:
-      پس فارغ التحصیل شدن از بخش اصول فقه به‌عنوان استادیار دانشکده شریعت انتخاب شدند.
-به‌عنوان امام و خطیب در چند مسجد شهر ریاض فعالیت نمودن که آخرین آنها مسجد جامع شیخ عبدالرزاق عفیفی رحمه الله بود.
-در سال ۱۴۰۴ هـ ق طی حکمی ایشان به‌عنوان امام و خطیب مسجدالحرام تعیین شدند.
-در سال ۱۴۰۸ هـ ق موفق به اخذ گواهی فوق لیسانس از دانشگاه امام محمد بن سعود با درجه ممتاز گشتند که استادان مشاور ایشان در نوشتن پایان نامه، شیخ عبدالرزاق عفیفی رحمه الله و دکتر عبدالرحمن الدویش بودند.
-استاد بخش دادگستری و قضاوت دانشکده شریعت دانشگاه ام القری مکه انتخاب شدند.
-شیخ عبدالرحمن السدیس در سال ۱۴۱۶ هـ ق موفق به اخذ گواهی دکتری از دانشکده شریعت دانشگاه ام القری مکه گردید که استاد مشاور ایشان در نگاشتن پایان نامه، شیخ احمد فهمی ابوسنه بودند.
-استادیار دانشکده شریعت دانشگاه ام القری مشغول به فعالیت شدند که همزمان با آن به امامت و خطابت در مسجد الحرام می پردازد.
-وی عضو چندین هیئت و مؤسسه علمی و دعوی و خیری می‌باشد و نیز حضور پررنگی در رسانه‌های جمعی داخلی و خارجی دارد، همچنین دارای اهتمام ویژه‌ای به مسائل علمی از طریق تدریس و ارائه بحث‌های علمی و تحقیقات مختلف می‌باشد.
-دیدگاه‌ها
-السدیس در مصاحبه با شبکه خبر سعودی طی سفر خود در آمریکا گفته بود:
-کشورش به رهبری ملک سلمان و آمریکا به ریاست دونالد ترامپ به عنوان دو قطب تأثیرگذار جهان و انسانیت را به سوی سواحل امنیت، ثبات، صلح و آرامش هدایت می‌کنند. این اظهار نظر از سوی چندین شخصیت شناخته شده و کاربران فعال شبکه‌های اجتماعی مورد انتقاد قرار گرفت. عبدالله شمری این سخنان السدیس در مورد آمریکا را مورد سخره گرفت و گفت بزرگترین دلیل این سخن کاری است که آمریکا در عراق و افغانستان از قبیل کشتار، تخریب و تعرض انجام داد و حمایت از صهیونیست‌ها در اشغال مقدسات مسلمانان. ترکی شلهوب یک ویدیو از جرایم نیروهای آمریکایی در عراق منتشر کرد که در زیرنویس آن نوشته شده بود که این همان دولتی است که السدیس می‌گوید عالم را به سوی صلح رهبری می‌کند. تاجر السر عثمان سخنان السدیس را در مورد آمریکا چنین توصیف کرد: «... تلاش کاهنانه برای پاک کردن پرونده سیاه آمریکا در عراق، افغانستان و فلسطین»
-
-رئیس کل اداره امور حرمین شریفین با بیان اینکه آنچه در غزه رخ می‌دهد یک فتنه است گفت: مسلمانان نباید به کاری که حق ندارند وارد آن شوند.
-      ''',
-      'country': 'عربستان سعودی'
+      'description': '$abdulrahmanAlsodais',
+      'country': 'عربستان سعودی',
+      'link': "https://fa.wikipedia.org/wiki/%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D9%86_%D8%A7%D9%84%D8%B3%D8%AF%DB%8C%D8%B3",
     },
     {
       'name': 'شیخ راشد العفاسی',
       'picture': 'images/Afasi.jpg',
-      'description': "Abdul rahman his last name is al Sodais",
-      'country': 'کویت'
+      'description': "$Rashed_Afasi",
+      'country': 'کویت',
+      'link': "https://vaislamah.com/%D8%B2%D9%86%D8%AF%DA%AF%DB%8C%D9%86%D8%A7%D9%85%D9%87-%D8%B4%DB%8C%D8%AE-%D9%85%D8%B4%D8%A7%D8%B1%DB%8C-%D8%A8%D9%86-%D8%B1%D8%A7%D8%B4%D8%AF-%D8%A7%D9%84%D8%B9%D9%81%D8%A7%D8%B3%DB%8C",
     },
     {
       'name': 'شیخ احمد العجمی',
       'picture': 'images/ajami.jpg',
-      'description': "Abdul rahman his last name is al Sodais",
-      'country': 'عربستان سعودی'
+      'description': "$ahmad_ajami",
+      'country': 'عربستان سعودی',
+      'link': "https://vaislamah.com/%D8%B2%D9%86%D8%AF%DA%AF%DB%8C%D9%86%D8%A7%D9%85%D9%87-%D8%A7%D8%AD%D9%85%D8%AF%D8%A8%D9%86-%D8%B9%D8%AC%D9%85%DB%8C",
     },
     {
       'name': 'شیخ مصطفی اسماعیل',
       'picture': 'images/esmaeil.jpg',
-      'description': "Abdul rahman his last name is al Sodais",
-      'country': 'مصر'
+      'description': "$Mostafa",
+      'country': 'مصر',
+      'link': "http://mobtakerejavan.blogfa.com/page/zmostafaesmaeel.aspx",
     },
     {
-      'name': 'شیخ طارق جمیل ',
-      'picture': 'images/tareq.jpg',
-      'description': "Abdul rahman his last name is al Sodais",
-      'country': 'پاکستان'
+      'name': 'ابوبکر شاطری ',
+      'picture': 'images/shateri.jpg',
+      'description': "$shateri",
+      'country': 'عربستان سعودی',
+      'link': "https://www.charkhoneh.com/content/930524107",
     },
     {
-      'name': 'شیخ سلیم الهلالی',
+      'name': 'استاد پرهیزپگار',
       'picture': 'images/salim.jpg',
-      'description': "Abdul rahman his last name is al Sodais",
-      'country': 'یمن'
+      'description': "$shahrear",
+      'country': 'ایران',
+      'link': "https://fa.wikipedia.org/wiki/%D8%B4%D9%87%D8%B1%DB%8C%D8%A7%D8%B1_%D9%BE%D8%B1%D9%87%DB%8C%D8%B2%DA%AF%D8%A7%D8%B1",
     },
   ];
 
+  Aboutme(){
+    Navigator.push(context, MaterialPageRoute(builder: (context){return About();}));
+  }
 
 
 
@@ -116,11 +114,22 @@ class _MyAppState extends State<MyApp> {
         title: Text("Top 10 Quran's Readers ",
         style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
         actions:[PopupMenuButton(onSelected: (values){
-         print (values);
+
+          switch(values){
+            case 'share':
+              Share.share('Top ten App');
+              break;
+            case 'About':
+              Aboutme();
+              break;
+            case 'Exit':
+              SystemNavigator.pop();
+              break;
+          }
        }, style: ButtonStyle(iconSize: WidgetStatePropertyAll(34)),
            itemBuilder: (BuildContext context ){
           return [ PopupMenuItem(value: 'share',child: Row(children: [Text("Share App"),Divider(indent: 10,),Icon(Icons.share)],),),
-          PopupMenuItem(value: 'about me',child: Row(children: [Text("About"),Divider(indent: 10,),Icon(Icons.info)],)),
+          PopupMenuItem(value: 'About',child: Row(children: [Text("About"),Divider(indent: 10,),Icon(Icons.info)],)),
           PopupMenuItem(value: 'Exit',child: Row(children: [Text("Exit"),Divider(indent: 10,),Icon(Icons.exit_to_app)],))];
        }),
        ],),
@@ -140,7 +149,8 @@ class _MyAppState extends State<MyApp> {
                   backgroundImage: AssetImage(
                (list[index]['picture']),)),
               trailing: IconButton(onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {return Details(name: list[index]['name'],picture: list[index]['picture'],description: list[index]['description'], country: list[index]['country'],);},));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {return Details(name: list[index]['name'],picture: list[index]['picture'],
+                      description: list[index]['description'], country: list[index]['country'],link:list[index]['link']);},));
               },
                   icon:Icon(Icons.arrow_forward,)),
                 onTap: (){},
