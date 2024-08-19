@@ -112,8 +112,8 @@ class _MyAppState extends State<MyApp> {
       ,
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text("Top 10 Quran's Readers ",
-        style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+        title: Text("Top 10 Quran's Reciter",
+        style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),),
         actions:[PopupMenuButton(onSelected: (values){
 
           switch(values){

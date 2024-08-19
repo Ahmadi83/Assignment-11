@@ -21,7 +21,8 @@ class _MyAppState extends State<MyApp1> {
   @override
   void initState() {
     // TODO: implement initState
-    Future.delayed(Duration(seconds: 1),(){Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {return
+    Future.delayed(Duration(seconds: 5),
+            (){Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {return
       MyApp();
     },));});
   }
@@ -32,8 +33,14 @@ class _MyAppState extends State<MyApp1> {
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Icon(Icons.star,size: 270,color: Colors.yellow,),
-            Text("Top 10",style: TextStyle(fontSize: 60,fontWeight: FontWeight.bold),),
+            CircleAvatar(
+              radius: 170,
+              backgroundImage: AssetImage('images/app1.jpg'),
+            ),
+
+            SizedBox(height: 30,),
+            
+            Text("Top 10 Quran's Reciter",style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),),
             Text("Version 0.1.1",style: TextStyle(fontSize: 30),),
 
         ],),
